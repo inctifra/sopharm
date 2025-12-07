@@ -63,15 +63,6 @@ $(function () {
     e.stopImmediatePropagation();
   });
 
-  /**
-   * Preloader
-   */
-  var $preloader = $('#preloader');
-  if ($preloader.length) {
-    $(window).on('load', function () {
-      $preloader.remove();
-    });
-  }
 
   /**
    * Scroll top button

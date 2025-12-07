@@ -10,7 +10,13 @@ import { initResourceSwiper } from "./libs/swiper";
 
 Swiper.use([Navigation, Autoplay]);
 
+/**
+ * Preloader
+ */
+var $preloader = $("#preloader");
+
 $(async function () {
+    $preloader.remove();
   const [
     { attachTypingSpinner },
     { RobustStudentUploader, submitStudentUploadForm },
@@ -81,7 +87,7 @@ $(async function () {
     const item = $(this);
     item.on("click", function (event) {
       const url = $(this).data("url");
-      if(!url)return;
+      if (!url) return;
       window.location.href = url;
     });
   });
