@@ -1,0 +1,46 @@
+{% load webpack_static from webpack_loader %}
+    <div class="row gy-5">
+      <div class="col-lg-6">
+        <div class="content">
+          <h3>Empowering Minds, Shaping Futures</h3>
+          <p>For over three decades, we have been committed to providing exceptional education that prepares students for success in an ever-changing world. Our innovative approach combines traditional academic excellence with cutting-edge technology and personalized learning experiences.</p>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="number">15,000+</div>
+              <div class="label">Students Enrolled</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">98%</div>
+              <div class="label">Graduation Rate</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">250+</div>
+              <div class="label">Expert Faculty</div>
+            </div>
+          </div>
+
+          <div class="mission-statement">
+            <p>
+              <em>"Our mission is to foster intellectual curiosity, critical thinking, and lifelong learning while nurturing compassionate leaders who will positively impact their communities and the world."</em>
+            </p>
+          </div>
+
+          <a href="about.html" class="btn-learn-more">
+            Learn More About Us
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="image-wrapper">
+          <img src="{% webpack_static 'images/education/campus-5.webp' %}" alt="Campus Overview" class="img-fluid" />
+          <div class="experience-badge">
+            <div class="years">32+</div>
+            <div class="text">Years of Excellence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+

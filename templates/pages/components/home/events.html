@@ -1,0 +1,91 @@
+{% load webpack_static from webpack_loader %}
+
+<div class="container">
+  <div class="event-filters mb-4">
+    <div class="row justify-content-center g-3">
+      <div class="col-md-4">
+        <select class="form-select">
+          <option selected="">All Months</option>
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select class="form-select">
+          <option selected="">All Categories</option>
+          <option>Academic</option>
+          <option>Arts</option>
+          <option>Sports</option>
+          <option>Community</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-6">
+      <div class="event-card">
+        <div class="event-date">
+          <span class="month">FEB</span>
+          <span class="day">15</span>
+          <span class="year">2025</span>
+        </div>
+        <div class="event-content">
+          <div class="event-tag academic">Academic</div>
+          <h3>Clinical Pharmacy Skills Workshop</h3>
+          <p>A hands-on training session focusing on patient assessment, counselling skills, and evidence-based pharmaceutical care for undergraduate pharmacy students.</p>
+          <div class="event-meta">
+            <div class="meta-item">
+              <i class="bi bi-clock"></i>
+              <span>09:00 AM - 03:00 PM</span>
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-geo-alt"></i>
+              <span>Main Pharmacy Skills Lab</span>
+            </div>
+          </div>
+          <div class="event-actions">
+            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="event-card">
+        <div class="event-date">
+          <span class="month">MAR</span>
+          <span class="day">10</span>
+          <span class="year">2025</span>
+        </div>
+        <div class="event-content">
+          <div class="event-tag sports">Sports</div>
+          <h3>Pharmacy Students’ Annual Sports Day</h3>
+          <p>An exciting day of competitions, team-building games, and inter-year tournaments organized by the JKUAT Pharmacy Students Association.</p>
+          <div class="event-meta">
+            <div class="meta-item">
+              <i class="bi bi-clock"></i>
+              <span>08:30 AM - 05:00 PM</span>
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-geo-alt"></i>
+              <span>JUJA Sports Grounds</span>
+            </div>
+          </div>
+          <div class="event-actions">
+            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% comment %} <div class="text-center mt-5">
+    <a href="#" class="btn-view-all">View All Events</a>
+  </div> {% endcomment %}
+</div>

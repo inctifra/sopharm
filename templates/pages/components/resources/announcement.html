@@ -1,0 +1,27 @@
+<div class="swiper-slide">
+  <div class="featured-event-content">
+    {% if announcement.image %}
+      <img src="{{ announcement.image.url }}" alt="{{ announcement.title }}" class="img-fluid" />
+    {% endif %}
+    <h4>{{ announcement.title }}</h4>
+
+    {% if announcement.start_date %}
+      <p>
+        <i class="bi bi-calendar-event"></i>
+        {% if announcement.end_date %}
+          {{ announcement.start_date|date:'M d, Y' }} - {{ announcement.end_date|date:'M d, Y' }}
+        {% else %}
+          {{ announcement.start_date|date:'M d, Y' }}
+        {% endif %}
+      </p>
+    {% endif %}
+
+    {% if announcement.description %}
+      <p>{{ announcement.description }}</p>
+    {% endif %}
+
+    {% if announcement.registration_link %}
+      <a href="{{ announcement.registration_link }}" class="btn-register">Register Now</a>
+    {% endif %}
+  </div>
+</div>

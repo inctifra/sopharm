@@ -1,0 +1,70 @@
+<!-- Modal -->
+<div class="modal fade" id="resourceUploadModal" tabindex="-1" aria-labelledby="resourceUploadModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-5">
+      <form action="/upload/" method="POST" id="studentUploadForm" class="needs-validation" novalidate enctype="multipart/form-data">
+        <!-- Header -->
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="resourceUploadModalLabel">Upload Notes / Assignments</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body border rounded-4 m-3">
+          <!-- Dropzone Area -->
+          <div class="dropzone p-0 m-0 border-0" id="studentUploadDropzone">
+            <div class="dz-message text-center p-4 border rounded">
+              <p class="mb-1">Drag and drop files here or click to upload</p>
+              <small>Allowed types: PDF, DOCX, PPTX, Images. Max size: 20MB</small>
+            </div>
+            <div class="dz-progress-container"></div>
+          </div>
+
+          <!-- Metadata Fields -->
+          <div class="row g-3">
+            <div class="col-12">
+              <label for="{{ resource_form.title.id_for_label }}" class="form-label">{{ resource_form.title.label }}</label>
+              {% render_field resource_form.title|attr:'class:form-control py-2 w-100' %}
+              <small>{{ resource_form.title.help_text }}</small>
+            </div>
+            <div class="col-md-6">
+              <label for="{{ resource_form.student_name.id_for_label }}" class="form-label">{{ resource_form.student_name.label }}</label>
+              {% render_field resource_form.student_name|attr:'class:form-control py-2 w-100' %}
+              <small>{{ resource_form.student_name.help_text }}</small>
+            </div>
+            <div class="col-md-6">
+              <label for="{{ resource_form.academic_level.id_for_label }}" class="form-label">{{ resource_form.academic_level.label }}</label>
+              {% render_field resource_form.academic_level|attr:'class:form-control py-2 w-100' %}
+              <small>{{ resource_form.academic_level.help_text|safe }}</small>
+            </div>
+            <div class="col-md-6">
+              <label for="{{ resource_form.semester.id_for_label }}" class="form-label">{{ resource_form.semester.label }}</label>
+              {% render_field resource_form.semester|attr:'class:form-control py-2 w-100' %}
+              <small>{{ resource_form.semester.help_text|safe }}</small>
+            </div>
+            <div class="col-md-6">
+              <label for="{{ resource_form.unit_name.id_for_label }}" class="form-label">{{ resource_form.unit_name.label }}</label>
+              {% render_field resource_form.unit_name|attr:'class:form-control py-2 w-100' %}
+              <small>{{ resource_form.unit_name.help_text|safe }}</small>
+            </div>
+            <div class="col-md-6">
+              <label for="{{ resource_form.unit_code.id_for_label }}" class="form-label">{{ resource_form.unit_code.label }}</label>
+              {% render_field resource_form.unit_code|attr:'class:form-control py-2 w-100' %}
+              <small>{{ resource_form.unit_code.help_text|safe }}</small>
+            </div>
+            <div class="col-md-6">
+              <label for="{{ resource_form.upload_type.id_for_label }}" class="form-label">{{ resource_form.upload_type.label }}</label>
+              {% render_field resource_form.upload_type|attr:'class:form-control py-2 w-100' %}
+              <small>{{ resource_form.upload_type.help_text|safe }}</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer border-0">
+          <button type="submit" class="btn primary-btn btn-md rounded-pill w-100" style="padding: 0.75rem 0;">Upload Materials</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

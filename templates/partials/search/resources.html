@@ -1,0 +1,13 @@
+{% load webpack_static from webpack_loader %}
+
+<div class="swiper resource-swiper">
+  <div class="swiper-wrapper">
+    {% for item in results %}
+      <div class="swiper-slide">
+        {% include 'pages/components/resources/item.html' with resource=item %}
+      </div>
+    {% empty %}
+      <h1 class="no-results d-flex align-items-center justify-content-center text-center">No matching resources found.</h1>
+    {% endfor %}
+  </div>
+</div>

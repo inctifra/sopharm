@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "display: grid",
+          "grid-template-columns",
+          "flex-direction",
+          "backdrop-filter",
+          "flex",
+          "user-select",
+          "order",
+          "color: color-mix(in srgb, var(--default-color) 70%, transparent)",
+          "border: 1px solid color-mix(in srgb, var(--default-color) 10%, transparent)",
+          "border: 1px solid color-mix(in srgb, var(--accent-color), transparent 50%)",
+          "outline: 1px solid color-mix(in srgb, var(--accent-color), transparent 50%)"
+        ]
+      }
+    ]
+  }
+}

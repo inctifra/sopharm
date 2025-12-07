@@ -1,0 +1,98 @@
+{% load static wagtailcore_tags wagtailuserbar %}
+{% load i18n %}
+{% load render_bundle from webpack_loader %}
+{% load webpack_static from webpack_loader %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      {% block title %}
+        Pharmacy Connect @ JKUAT{% if page.seo_title %}
+          {{ page.seo_title }}
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+      {% endblock %}
+      {% block title_suffix %}
+        {% wagtail_site as current_site %}
+        {% if current_site and current_site.site_name %}
+          - {{ current_site.site_name }}
+        {% endif %}
+      {% endblock %}
+    </title>
+    {% if page.search_description %}
+      <meta name="description" content="{{ page.search_description }}" />
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {# Force all links in the live preview panel to be opened in a new tab #}
+    {% if request.in_preview_panel %}
+      <base target="_blank" />
+    {% endif %}
+
+    {# Global stylesheets #}
+    {% block css %}
+      {% render_bundle 'project' 'css' %}
+    {% endblock %}
+
+    {% block extra_css %}
+      {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+    <link href="{% webpack_static 'images/favicon.png' %}" rel="icon" />
+    <link href="{% webpack_static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+    {# Global javascript #}
+    {% block javascript %}
+      <!-- Vendor dependencies bundled as one file -->
+      {% render_bundle 'vendors' 'js' attrs='defer' %}
+      <!-- place project specific Javascript in this file -->
+      {% render_bundle 'project' 'js' attrs='defer' %}
+    {% endblock %}
+  </head>
+
+  <body class="{% block body_class %}
+      
+      
+      
+index-page
+
+
+
+    {% endblock %}">
+    {% wagtailuserbar %}
+
+    {% block header %}
+      {% include 'components/header.html' %}
+    {% endblock %}
+
+    <main class="main">
+      {% block content %}
+        {% block pageHead %}
+
+        {% endblock %}
+      {% endblock %}
+
+      {% block modal %}
+        {% include 'modals/learning.html' %}
+        {% include 'modals/resources.html' %}
+      {% endblock %}
+    </main>
+
+    {% block footer %}
+      {% include 'components/footer.html' %}
+    {% endblock %}
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    {% block extra_js %}
+      {# Override this in templates to add extra javascript #}
+    {% endblock %}
+  </body>
+</html>

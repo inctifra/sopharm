@@ -1,0 +1,34 @@
+<div class="event-item shadow-sm p-3 rounded-4 m-2" data-url="{{resource.get_absolute_url}}" style="cursor: pointer;">
+  <div class="event-date">
+    <span class="day">{{ resource.upload_time|date:'d' }}</span>
+    <span class="month">{{ resource.upload_time|date:'b'|upper }}</span>
+  </div>
+
+  <!-- Content Section -->
+  <div class="event-content">
+    <h3>{{ resource.title }}</h3>
+
+    <div class="event-meta">
+      <p>
+        <i class="bi bi-person"></i>
+        Uploaded by: {{ resource.student_name }}
+      </p>
+      <p>
+        <i class="bi bi-layers"></i>
+        Level: {{ resource.academic_level }} &nbsp; | &nbsp; Semester: {{ resource.semester }}
+      </p>
+      <p>
+        <i class="bi bi-book"></i>
+        {{ resource.unit_name }} ({{ resource.unit_code }})
+      </p>
+      <p>
+        <i class="bi bi-cloud-arrow-up"></i>
+        Type: {{ resource.get_upload_type_display|title }}
+      </p>
+    </div>
+
+    <p>Uploaded on: {{ resource.upload_time|date:'F j, Y g:i A' }}</p>
+
+    <a href="#" class="btn-event">View Resource <i class="bi bi-arrow-right"></i></a>
+  </div>
+</div>

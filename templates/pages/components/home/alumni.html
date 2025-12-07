@@ -1,0 +1,33 @@
+{% load webpack_static from webpack_loader %}
+
+<div class="container">
+  <div class="testimonials-slider swiper init-swiper">
+    <div class="swiper-wrapper">
+        {% for x in "123" %}
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="row">
+              <div class="col-lg-8">
+                <h2>My Foundation for a Successful Pharmacy Career</h2>
+                <p>The rigorous training and mentorship I received at JKUAT equipped me with the clinical skills and confidence needed in today’s dynamic healthcare environment. The laboratories, academic support, and exposure to real-world practice shaped my professional journey.</p>
+                <p>Looking back, the strong academic culture and collaborative community played a vital role in preparing me for both industry and clinical practice. I remain grateful for the solid foundation built at the School of Pharmacy.</p>
+                <div class="profile d-flex align-items-center">
+                  <img src="{% webpack_static 'images/person/person-m-7.webp' %}" class="profile-img" alt="" />
+                  <div class="profile-info">
+                    <h3>Saul Goodman</h3>
+                    <span>Pharmacy Graduate</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="featured-img-wrapper">
+                  <img src="{% webpack_static 'images/person/person-m-7.webp' %}" class="featured-img" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>

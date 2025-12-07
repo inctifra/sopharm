@@ -1,0 +1,135 @@
+<footer id="footer" class="footer-16 footer position-relative dark-background">
+  <div class="container">
+    <div class="footer-main">
+      <div class="row align-items-start">
+        <!-- Logo + Description -->
+        <div class="col-lg-5">
+          <div class="brand-section">
+            <a href="{% if page %}{{ page.url }}{% else %}/{% endif %}" class="logo d-flex align-items-center mb-4"><span class="sitename">JKUAT SOPHARM</span></a>
+            <p class="brand-description">Advancing excellence in pharmacy education, research, and community healthcare. Connecting students, alumni, and professionals for a better pharmaceutical future.</p>
+            <div class="contact-info mt-5">
+              <div class="contact-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>JKUAT Main Campus, School of Pharmacy, Juja, Kenya</span>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-telephone"></i>
+                <span>+254 700 000 000</span>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-envelope"></i>
+                <span><a href="mailto:pharmacy@jkuat.ac.ke">pharmacy@jkuat.ac.ke</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-lg-7">
+          <div class="footer-nav-wrapper">
+            <div class="row">
+              <div class="col-6 col-lg-3">
+                <div class="nav-column">
+                  <h6>School</h6>
+                  <nav class="footer-nav">
+                    <a href="">About the School</a>
+                    <a href="">Faculty</a>
+                    <a href="">Departments</a>
+                    <a href="">Research</a>
+                    <a href="">Contact</a>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3">
+                <div class="nav-column">
+                  <h6>Students</h6>
+                  <nav class="footer-nav">
+                    <a href="">Student Portal</a>
+                    <a href="">Academic Calendar</a>
+                    <a href="{% url 'core:learning_resources' %}" class="active">Learning Resources</a>
+                    <a href="">Clubs & Societies</a>
+                    <a href="">Exams & Timetables</a>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3">
+                <div class="nav-column">
+                  <h6>Alumni</h6>
+                  <nav class="footer-nav">
+                    <a href="">Alumni Network</a>
+                    <a href="">Events</a>
+                    <a href="">Mentorship Program</a>
+                    <a href="">Support the School</a>
+                    <a href="">Newsletter</a>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3">
+                <div class="nav-column">
+                  <h6>Useful Links</h6>
+                  <nav class="footer-nav">
+                    <a href="https://www.jkuat.ac.ke">JKUAT Main Website</a>
+                    <a href="#">Library</a>
+                    <a href="#">eLearning Portal</a>
+                    <a href="#">Health Services</a>
+                    <a href="#">Downloads</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="newsletter-section">
+            <h5>Stay Connected</h5>
+            <p>Subscribe for school updates, events, and announcements.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="social-section">
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="bi bi-facebook"></i><span>Facebook</span></a>
+              <a href="#" class="social-link"><i class="bi bi-twitter"></i><span>Twitter</span></a>
+              <a href="#" class="social-link"><i class="bi bi-instagram"></i><span>Instagram</span></a>
+              <a href="#" class="social-link"><i class="bi bi-linkedin"></i><span>LinkedIn</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="bottom-content">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="copyright">
+              <p>
+                © <span class="sitename">JKUAT SOPHARM</span>. All rights reserved.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="legal-links">
+              <a href="">Privacy Policy</a>
+              <a href="">Terms of Service</a>
+              <a href="">Cookie Policy</a>
+              <div class="credits">JKUAT SCHOOL OF PHARMACY.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
