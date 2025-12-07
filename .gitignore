@@ -274,6 +274,8 @@ Session.vim
 
 # Temporary
 .netrwhist
+.gunicorn
+.nginx
 
 # Auto-generated tag files
 tags

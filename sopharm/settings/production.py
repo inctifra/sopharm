@@ -1,10 +1,9 @@
 from .base import *  # noqa: F403
 from .base import env
-from .base import MIDDLEWARE, BASE_DIR
+from .base import MIDDLEWARE
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEBUG", default=False)
-DEBUG = False
 
 MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 
@@ -62,3 +61,11 @@ AWS_S3_CUSTOM_DOMAIN = env("DJANGO_AWS_S3_CUSTOM_DOMAIN", default=None)
 aws_s3_domain = AWS_S3_CUSTOM_DOMAIN or f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 
 MEDIA_URL = f"https://{aws_s3_domain}/media/"
+
+CORS_ALLOWED_ORIGINS = [
+    "https://sopharm.ipvs.cloud",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://sopharm.ipvs.cloud",
+]
